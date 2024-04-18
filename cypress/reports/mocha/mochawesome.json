@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-04-10T08:02:50.665Z",
+    "end": "2024-04-10T08:03:06.109Z",
+    "duration": 15444,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4a9a6325-1246-4e32-9139-cf0957c75782",
+      "title": "",
+      "fullFile": "cypress\\e2e\\testCasses\\conduit-test.spec.cy.js",
+      "file": "cypress\\e2e\\testCasses\\conduit-test.spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "21af280e-09b6-4ef1-96e6-15fbb454e528",
+          "title": "Testing Conduit",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Signup into Conduit",
+              "fullTitle": "Testing Conduit Signup into Conduit",
+              "timedOut": null,
+              "duration": 4822,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "landingPage.signUpButton().click();\ncy.get('h1[class=\"text-xs-center\"]').should('contain.text', 'Sign Up');\ncy.xpath('//a[normalize-space()=\"Have an account?\"]').should('contain.text', 'Have an account?');\n//entering valid credential to sign up into conduit by calling different methods from the pages \nloginPage.enterUserName().type(userData.validUserName);\nloginPage.enterEmail().type(userData.validEmail);\nloginPage.enterPassword().type(userData.validPassword);\n// then click on the submit botton \nloginPage.submitButton().click();",
+              "err": {},
+              "uuid": "8b606301-1954-4edd-8e49-458f052777de",
+              "parentUUID": "21af280e-09b6-4ef1-96e6-15fbb454e528",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "signUp to conduit with an already used credential",
+              "fullTitle": "Testing Conduit signUp to conduit with an already used credential",
+              "timedOut": null,
+              "duration": 4127,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "landingPage.signUpButton().click();\ncy.get('h1[class=\"text-xs-center\"]').should('contain.text', 'Sign Up');\ncy.xpath('//a[normalize-space()=\"Have an account?\"]').should('contain.text', 'Have an account?');\n//entering valid credential to sign up into conduit by calling different methods from the pages \nloginPage.enterUserName().type(userData.validUserName);\nloginPage.enterEmail().type(userData.validEmail);\nloginPage.enterPassword().type(userData.validPassword);\n// then click on the submit botton \nloginPage.submitButton().click();\n// output of the above action\nloginPage.dislplayEmailAlert().should('be.visible');",
+              "err": {},
+              "uuid": "8e63f496-dfe1-4037-8e0c-d334f4ea81e5",
+              "parentUUID": "21af280e-09b6-4ef1-96e6-15fbb454e528",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "singin to conduit with valid credentials",
+              "fullTitle": "Testing Conduit singin to conduit with valid credentials",
+              "timedOut": null,
+              "duration": 2893,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "landingPage.signInButton().click();\ncy.xpath('//h1[normalize-space()=\"Sign In\"]').should('contain.text', 'Sign In');\ncy.xpath('//a[normalize-space()=\"Need an account?\"]').should('contain.text', 'Need an account?');\n//enterin valid credentials in the different fields \nloginPage.enterEmail().type(userData.validEmail);\nloginPage.enterPassword().type(userData.validPassword);\n//submit button\nloginPage.submitButton().click();\n//\ncy.xpath('//a[normalize-space()=\"pixiesf\"]').should('be.visible');",
+              "err": {},
+              "uuid": "1e16d995-e131-411d-8e43-87c0b5d38444",
+              "parentUUID": "21af280e-09b6-4ef1-96e6-15fbb454e528",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8b606301-1954-4edd-8e49-458f052777de",
+            "8e63f496-dfe1-4037-8e0c-d334f4ea81e5",
+            "1e16d995-e131-411d-8e43-87c0b5d38444"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11842,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+    "validEmail":"pixiesf@gmail.com",
+    "validPassword":"cypressdemo",
+    "validUserName":"pixief",
+
+    "invalidEmail":"pixiesf123@gmail.com",
+    "invalidPassword":"cypressdemo123"
+}
